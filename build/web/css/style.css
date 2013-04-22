@@ -1,0 +1,553 @@
+/* 
+    Document   : style
+    Created on : Jan 4, 2013, 1:00:53 AM
+    Author     : guyklainer
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/* General layout 
+-------------------- */
+
+@font-face { font-family: "journal"; src: url(../fonts/JOURNAL.TTF); }
+
+body {
+    background: url(../images/bg.png);
+}
+
+h1, h2 {
+    /*color: #F89406;*/
+    text-shadow: 3px 2px 10px gray;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(241, 238, 238, 0.4);
+}
+
+h4 {
+    clear: none;
+    float: left;
+    padding: 0 1%;
+    margin: 0;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+.alignright {
+    text-align: right;
+}
+
+footer {
+    padding: 1% 0;
+}
+
+.center{
+    text-align: center;
+}
+
+.alert {
+    width: 940px;
+    margin: 0 auto 1%;
+    border-radius: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.interaction .alert {
+    width: 80%;
+}
+
+.half {
+    width: 43%;
+    margin: 0% auto 2%
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    margin: 0 10px 0px;
+}
+
+.yellow {
+    color: #FDD955 !important;
+}
+
+.lost {
+    text-decoration: line-through;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Board layout
+-----------------*/
+.board {
+    background: url(../images/board.jpg) no-repeat;
+    background-size: 615px;
+    height: 640px;
+    position: relative;
+    width: 614px;
+    margin-top: 10px;
+}
+
+.room {
+    height: 135px;
+    margin: 0;
+    position: absolute;
+}
+
+.room.stairs {
+    top: 275px;
+    left: 240px;
+}
+
+.room.KITCHEN {
+    top: 30px;
+    left: 10px;
+}
+
+.room.empty1 {
+    top: 485px;
+    left: 185px;
+    width: 50px;
+}
+
+.room.empty3 {
+    top: 420px;
+    left: 20px;
+    height: 52px;
+    width: 175px;
+}
+
+.room.empty5 {
+    top: 180px;
+    left: 20px;
+    height: 52px;
+    width: 175px;
+}
+
+.room.empty7 {
+    top: 50px;
+    left: 160px;
+    width: 50px;
+}
+
+.room.empty9 {
+    top: 50px;
+    left: 407px;
+    width: 50px;
+}
+
+.room.empty11 {
+    top: 155px;
+    left: 420px;
+    height: 52px;
+    width: 175px;
+}
+
+.room.empty15 {
+    top: 485px;
+    left: 380px;
+    width: 50px;
+}
+
+.room.STUDY {
+    top: 530px;
+    left: 435px;
+    height: 100px;
+    width: 167px;
+}
+.room.HALL {
+    top: 462px;
+    left: 240px;
+    height: 165px;
+}
+.room.LOUNGE {
+    top: 490px;
+    left: 13px;
+    width: 165px;
+}
+.room.LIBRARY {
+    left: 460px;
+    top: 360px;
+    height: 130px;
+}
+.room.DINING_ROOM {
+    left: 20px;
+    top: 260px;
+    width: 180px;
+}
+.room.CONSERVATORY {
+    top: 10px;
+    left: 460px;
+    height: 145px;
+}
+.room.BILLIARD_ROOM {
+    top: 210px;
+    left: 455px;
+    width: 150px;
+    height: 120px;
+}
+.room.BALLROOM {
+    top: 65px;
+    left: 215px;
+    width: 185px;
+}
+
+.title.MRS_WHITE,
+.on-board.MRS_WHITE {
+    background-image: url(../images/white-face.png);
+}
+
+.title.MRS_PEACOCK,
+.on-board.MRS_PEACOCK {
+    background-image: url(../images/peacock-face.png);
+}
+
+.title.COLONEL_MUSTARD,
+.on-board.COLONEL_MUSTARD {
+    background-image: url(../images/mustard-face.png);
+}
+
+.title.MISS_SCARLETT,
+.on-board.MISS_SCARLETT {
+    background-image: url(../images/scarlett-face.png);
+}
+
+.title.REVEREND_GREEN,
+.on-board.REVEREND_GREEN {
+    background-image: url(../images/green-face.png);
+}
+
+.title.PROFESSOR_PLUM,
+.on-board.PROFESSOR_PLUM {
+    background-image: url(../images/plum-face.png);
+}
+
+.on-board.DAGGER {
+    background-image: url(../images/dagger2.png);
+}
+.on-board.ROPE {
+    background-image: url(../images/rope2.png);
+}
+.on-board.REVOLVER {
+    background-image: url(../images/revolver2.png);
+}
+.on-board.WRENCH {
+    background-image: url(../images/wrench.png);
+}
+.on-board.CANDLESTICK {
+    background-image: url(../images/candlestick2.png);
+}
+.on-board.LEAD_PIPE {
+    background-image: url(../images/lead-pipe2.png);
+}
+
+.title {
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.on-board {
+    width: 35px;
+    height: 35px;
+    float: left;
+    background-size: 35px !important;
+    margin: 2%;
+    padding: 1px 4px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px black;
+    background-color: rgba(32, 233, 225, 0.67);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.room.choose-option {
+    background: rgba(136, 224, 136, 0.76);
+    box-shadow: 0 0 15px 5px white;
+    border: 2px solid black;
+    content: "asdasD";
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.room.choose-option.selected {
+    background: rgba(224, 124, 99, 0.76);
+}
+
+/* Cards 
+------------------*/
+
+.card.PROFESSOR_PLUM {
+    background: url(../images/prof-plum.png) no-repeat left center;
+}
+.card.REVEREND_GREEN {
+    background: url(../images/green-atya.png) no-repeat left center;
+}
+.card.MISS_SCARLETT {
+    background: url(../images/miss-scarlett.png) no-repeat left center;
+}
+.card.COLONEL_MUSTARD {
+    background: url(../images/general-mustard.png) no-repeat left center;
+}
+.card.MRS_PEACOCK {
+    background: url(../images/mrs-peacock.png) no-repeat left center;
+}
+.card.MRS_WHITE {
+    background: url(../images/mrs-white.png) no-repeat left center;
+}
+
+.card.DAGGER {
+    background: url(../images/dagger2.png) no-repeat left center;
+}
+.card.ROPE {
+    background: url(../images/rope2.png) no-repeat left center;
+}
+.card.REVOLVER {
+    background: url(../images/revolver2.png) no-repeat left center;
+}
+.card.WRENCH {
+    background: url(../images/wrench.png) no-repeat left center;
+}
+
+.card.CANDLESTICK {
+    background: url(../images/candlestick2.png) no-repeat left center;
+}
+.card.LEAD_PIPE {
+    background: url(../images/lead-pipe2.png) no-repeat left center;
+}
+
+.card.BALLROOM {
+    background: url(../images/ballroom.png) no-repeat left center;
+}
+.card.BILLIARD_ROOM {
+    background: url(../images/billiard-room.png) no-repeat left center;
+}
+.card.CONSERVATORY {
+    background: url(../images/conseevatory.png) no-repeat left center;
+}
+.card.DINING_ROOM {
+    background: url(../images/dining-room.png) no-repeat left center;
+}
+.card.HALL {
+    background: url(../images/hall.png) no-repeat left center;
+}
+.card.KITCHEN {
+    background: url(../images/kitchen.png) no-repeat left center;
+}
+.card.LIBRARY {
+    background: url(../images/library.png) no-repeat left center;
+}
+.card.LOUNGE {
+    background: url(../images/lounge.png) no-repeat left center;
+}
+.card.STUDY {
+    background: url(../images/study.png) no-repeat left center;
+}
+
+.card {
+    height: 120px;
+    width: 80px;
+    display: inline-block;
+    margin: 1%;
+}
+
+.cards {
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Custom
+-------------*/
+
+.settings.container {
+    box-shadow: 0px 0px 2px 1px gray;
+    background: rgba(245, 245, 220, 0.21);
+}
+
+.inputs input,
+.inputs select {
+    margin: 2% 0;
+}
+
+.players {
+    width: 100%;
+    margin: 0 0 5px;
+    list-style-type: none;
+    height: 20px;
+    padding: 10px 0;
+    background: black;
+    color: rgb(168, 163, 163);
+    position: fixed;
+    top: 0;
+    position: relative;
+}
+
+.interaction {
+    margin: 10px 0 0;
+    width: 260px;
+    height: 600px;
+}
+
+.interaction .title {
+    width: 111px;
+    height: 92px;
+    padding-left: 125px;
+    display: block;
+}
+
+.interaction input[type="submit"] {
+    margin-top: 10px;
+}
+
+.players .container {
+    background: url(../images/logo-small.png) no-repeat right center black;
+}
+
+.player {
+    padding: 1%;
+    display: inline;
+}
+
+.player.current-player {
+    color: white;
+}
+
+.fader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 162, 162, 0.76);
+    z-index: 99;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.in-fader {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.73);
+    margin-top: 45px;
+    border-radius: 20px;
+    padding: 2%;
+    min-height: 300px;
+    box-shadow: 0 0 10px 2px white;
+}
+
+.in-fader p,
+.in-fader h5 {
+    color: white;
+    font-family: journal;
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.in-fader select {
+    float: left;
+    clear: left;
+}
+
+.choose-card-assumption .card.half-opacity {
+    opacity: 0.5;
+}
+
+
+input.assumption-button {
+    width: 160px;
+    float: right;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+input.assumption-button:hover {
+    width: 170px;
+}
+
+input.assumption-button:hover {
+    transition: width 200ms;
+    -ms-transition: width 200ms;
+    -webkit-transition: width 200ms;
+    -o-transition: width 200ms;
+    -moz-transition: width 200ms;
+}
+
+.cube:hover,
+.cube:active {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transition: 200ms;
+    -ms-transition: 200ms;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
+    -moz-transition: 200ms;
+}
+
+.dd-container {
+    float: left;
+    clear: left;
+    margin: 1% 0;
+    
+}
+
+.dd-selected-image,
+.dd-option-image {
+    max-height: 50px;
+}
+
+.dd-selected-text,
+.dd-option-text {
+    line-height: 45px !important;
+}
+
+.make-quit {
+    margin-top: 10%;
+}
+
+.waiting-list {
+    margin: 0;
+}
+
+.waiting-list li,
+.options-list li {
+    display: inline-block;
+    margin: 0 1% 0 0;
+}
+
+.waiting-player,
+.option-player {
+    width: 110px;
+    height: 92px;
+}
+
+.waiting-msg img {
+    height: 325px;
+    margin-top: 5%; 
+    border-radius: 90px;
+}
+
+.questions {
+    margin-top: 10%;
+}
+
+.fader .cards {
+    float: none;    
+}
+
+.choose-card-assumption .card {
+    cursor: pointer;
+}
+
+.clearfix {
+    clear: both;
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="clue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="murder_room" type="room" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="murder_weapon" type="weapon" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="murderer" type="suspect" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="players">
+					<xs:complexType>
+						<xs:sequence minOccurs="3" maxOccurs="6">
+							<xs:element name="player" type="player"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!--	Player Definition-->
+	<xs:complexType name="player">
+		<xs:sequence>
+			<xs:element name="cards" type="deck"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="player_details"/>
+	</xs:complexType>
+	<xs:simpleType name="player_type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HUMAN"/>
+			<xs:enumeration value="COMPUTER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="player_details">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="type" type="player_type"/>
+		<xs:attribute name="character" type="suspect"/>
+	</xs:attributeGroup>
+	
+	<!--	Deck Definition-->
+	<xs:complexType name="deck">
+		<xs:sequence>
+			<xs:element name="card" type="card" minOccurs="1" maxOccurs="18"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="card">
+		<xs:attribute name="type" type="card_type" use="optional"/>
+		<xs:attribute name="suspect" type="suspect" use="optional"/>
+		<xs:attribute name="weapon" type="weapon" use="optional"/>
+		<xs:attribute name="room" type="room" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="card_type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="suspect"/>
+			<xs:enumeration value="weapon"/>
+			<xs:enumeration value="room"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="suspect">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Miss Scarlett"/>
+			<xs:enumeration value="Colonel Mustard"/>
+			<xs:enumeration value="Mrs. White"/>
+			<xs:enumeration value="Reverend Green"/>
+			<xs:enumeration value="Mrs. Peacock "/>
+			<xs:enumeration value="Professor Plum"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="weapon">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CANDLESTICK"/>
+			<xs:enumeration value="DAGGER"/>
+			<xs:enumeration value="LEAD PIPE"/>
+			<xs:enumeration value="REVOLVER"/>
+			<xs:enumeration value="ROPE"/>
+			<xs:enumeration value="WRENCH"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="room">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HALL"/>
+			<xs:enumeration value="LOUNGE"/>
+			<xs:enumeration value="DINING ROOM"/>
+			<xs:enumeration value="KITCHEN"/>
+			<xs:enumeration value="BALLROOM"/>
+			<xs:enumeration value="CONSERVATORY"/>
+			<xs:enumeration value="BILLIARD ROOM"/>
+			<xs:enumeration value="LIBRARY"/>
+			<xs:enumeration value="STUDY"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
